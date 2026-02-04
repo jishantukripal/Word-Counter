@@ -1,0 +1,43 @@
+Role: Act as a Lead Frontend Engineer and UI/UX Architect.
+
+Goal: Build a production-ready, modular React application called "Word Lab", an advanced text analysis tool.
+
+Technical Constraints & Stack:
+
+Framework: React.
+Styling: Tailwind CSS (responsive, mobile-first).
+Icons: Lucide-React.
+State Management: React Hooks (useState/useMemo).
+Persistence: `localStorage` for automatic draft saving.
+Default Theme: Light Mode (with a toggle for Dark Mode).
+
+Architecture Requirements:
+
+1. Modular Components: Separate UI into `Header`, `StatsGrid`, `Editor`, `ControlBar`, and `KeywordBadge`.
+2. Custom Hook: Create `useTextAnalyzer` to handle all logic (word counts, reading time, transformations).
+3. Accessibility: Use semantic HTML (`<main>`, `<header>`, `aria-labels`).
+
+Feature Specifications:
+
+1. The Editor: A focus-mode textarea with auto-resizing and custom scrollbar styling.
+2. The Stats Column:
+
+Basic: Words, Characters (with/without spaces), Sentences, and Paragraphs.
+Advanced: Reading Level: Calculate Flesch-Kincaid Grade Level using the standard formula: 
+
+Tooltip: On hovering over the Grade score, show a popup explaining how the grade is calculated.
+Time: Estimated Reading Time (225 wpm) and Speaking Time (150 wpm).
+Lexical Density: Unique words vs. total words percentage.
+
+3. Text Transformers: Buttons for UPPERCASE, lowercase, Title Case, and a Format button (removes extra spaces/breaks).
+4. UX Utilities: "Copy to Clipboard" with a visual toast/success confirmation.
+
+Deliverables Required:
+
+1. Project Structure: A tree view of the folder hierarchy.
+2. Full Source Code: Provide complete, non-omitted code for:
+
+`useTextAnalyzer.js` (Include the full syllable counting logic and Flesch-Kincaid math).
+`App.jsx` (Main layout integrating the search and theme logic).
+`StatsDisplay.jsx` (The component with hover-based formula explanations).
+`index.css` (Tailwind directives and custom UI tweaks).
